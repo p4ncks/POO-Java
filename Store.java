@@ -10,17 +10,17 @@ public class Store {
 
     public void addProduct(Product product) {
         products.add(product);
-        System.out.println("Product added: " + product);
+        System.out.println("Produto adicionado: " + product);
     }
 
     public void removeProduct(String name) {
         products.removeIf(product -> product.getName().equalsIgnoreCase(name));
-        System.out.println("Product removed: " + name);
+        System.out.println("Produto removido: " + name);
     }
 
     public void viewProducts() {
         if (products.isEmpty()) {
-            System.out.println("No products in the store.");
+            System.out.println("Não há produtos na loja.");
         } else {
             products.forEach(System.out::println);
         }

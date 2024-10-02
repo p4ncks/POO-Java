@@ -7,24 +7,24 @@ public class Main {
         boolean running = true;
 
         while (running) {
-            System.out.println("1. Add Product");
-            System.out.println("2. Remove Product");
-            System.out.println("3. View Products");
-            System.out.println("4. Exit");
-            System.out.print("Choose an option: ");
+            System.out.println("1. Adicionar um novo produto.");
+            System.out.println("2. Remover um produto.");
+            System.out.println("3. Ver produtos.");
+            System.out.println("4. Sair.");
+            System.out.print("Escolher uma opção: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter product name: ");
+                    System.out.print("Insira o nome do produto: ");
                     String name = scanner.nextLine();
-                    System.out.print("Enter product quantity: ");
+                    System.out.print("Insira a quantidade do produto: ");
                     int quantity = scanner.nextInt();
                     store.addProduct(new Product(name, quantity));
                     break;
                 case 2:
-                    System.out.print("Enter product name to remove: ");
+                    System.out.print("Insira o nome do produto que deseja remover: ");
                     String removeName = scanner.nextLine();
                     store.removeProduct(removeName);
                     break;
@@ -35,7 +35,7 @@ public class Main {
                     running = false;
                     break;
                 default:
-                    System.out.println("Invalid option. Please try again.");
+                    System.out.println("Opção inválida, tente novamente.");
             }
         }
         scanner.close();
